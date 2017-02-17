@@ -33,14 +33,14 @@ WebKit 是一个开源的浏览器引擎，与之相对应的引擎有Gecko（Mo
 * graceful degradation 优雅降级
 * 断点的选择: ex. 0 - 480 / 481 - 800 / 801 - ?
 
-
-## robot.txt
+## HTML
+### robot.txt
 * 提供爬虫范围
 
-## human.txt
+### human.txt
 * 开发者信息
 
-## IE兼容模式
+### IE兼容模式
 ```HTML
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 content ＝ 模仿某个模式的行为
@@ -54,13 +54,25 @@ ie ＝ edge ： 强制用最新的ie浏览器模式rendering页面
 <![endif]-->
 ```
 
-## media query
 
-### css2中
+
+### HTML标签
+* `<header>` ： 页眉
+* `<footer>` ： 页脚
+* `<nav>` : 可看作一个特殊的section
+* `<article>` : 也可看作一个特殊的section
+* `<section>` : 区块
+* `<span>`: 没有具体语义，起修饰作用
+
+## CSS
+
+### media query
+
+#### css2中
 * media ＝ "print"
 * media = "screen"
 
-### css3
+#### css3
 * @meida all and A and B ...
 * not/and/only/or
 * , = or
@@ -69,7 +81,7 @@ ie ＝ edge ： 强制用最新的ie浏览器模式rendering页面
 旧浏览器中，只会解释成，
 media ＝ "only"
 ```
-#### attribute
+##### attribute
 * width
 * heigth
 * orientation
@@ -96,13 +108,3 @@ maximun-scale = 1.0,
 user-scalable = no"/>
 讲显示比例设置成1，禁用了用户的缩放功能。
 ```
-
-## HTML标签
-* `<header>` ： 页眉
-* `<footer>` ： 页脚
-* `<nav>` : 可看作一个特殊的section
-* `<article>` : 也可看作一个特殊的section
-* `<section>` : 区块
-* `<span>`: 没有具体语义，起修饰作用
-
-
