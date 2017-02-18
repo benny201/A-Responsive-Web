@@ -180,22 +180,53 @@ Use the ::after selector to insert something after the content.
 
 ### display
 * inline-block: 在一行显示
+* inline
+* block: Displays an element as a block element (like `<p>`)
+* table: 此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。
+```CSS
+block元素的特点是：
+　　总是在新行上开始；
+　　高度，行高以及顶和底边距都可控制；
+　　宽度缺省是它的容器的100%，除非设定一个宽度
+　　<div>, <p>, <h1>, <form>, <ul> 和 <li>是块元素的例子。
 
+display:inline就是将元素显示为行内元素.
+
+　　inline元素的特点是：
+　　和其他元素都在一行上；
+　　高，行高及顶和底边距不可改变；
+　　宽度就是它的文字或图片的宽度，不可改变。
+　　<span>, <a>, <label>, <input>, <img>, <strong> 和<em>是inline元素的例子。
+
+display:inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。
+    准确地说，应用此特性的元素呈现为内联对象，周围元素保持在同一行，但可以设置宽度和高度地块元素的属性
+```
 
 ### box-sizing
+```CSS
+box-sizing属性可以为三个值之一：content-box（default），border-box，padding-box。
+
+content-box，border和padding不计算入width之内
+
+padding-box，padding计算入width内
+
+border-box，border和padding计算入width之内，其实就是怪异模式了
+```
 
 
+### text-overflow
+* The text-overflow property specifies how overflowed content that is not displayed should be signaled to the user.
+```CSS
+clip: Default value. Clips the text
+ellipsis: Render an ellipsis ("...") to represent clipped text
+```
 
-### text-overflow: ellipsis;
 
-### display: block;
-Displays an element as a block element (like `<p>`)
-
-### font-style: normal;
-
-### cursor: not-allowed;
+### cursor: not-allowed
+* The cursor indicates that the requested action will not be executed
 
 ### border-radius
+* The border-radius property is used to add rounded corners to an element.
 
 ### child seletor
 ```CSS
