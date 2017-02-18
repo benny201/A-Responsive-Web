@@ -108,3 +108,93 @@ maximun-scale = 1.0,
 user-scalable = no"/>
 讲显示比例设置成1，禁用了用户的缩放功能。
 ```
+
+### CSS resets
+引入resets为了统一不同浏览器的默认样式。
+
+### Normalize.css
+替代CSS resets的存在，但是与CSS resets有一定的差异
+
+### 文字颜色
+* 一般文字颜色会降低黑色对比度，显得更雅致，一般使用`#222`黑
+
+### px,em,rem
+* px: 像素，中文字体一般12px
+* em: 相对长度，父元素的font-size
+```CSS
+具有继承特点，一直往上找，直到找到为止，如果没有设置font－size，浏览器会有一个默认的em设置：1em ＝ 16px
+```
+* rem： 相对长度，但是只根据html节点的font-size，比em安全
+* font-size: 62.5% -> 1 rem = 10px
+* font-size: 100% -> 1rem = 16px
+
+### ::selection
+* 设置选中文字后的各种属性，例如背景颜色
+
+### 清楚浮动
+* float会产生高度塌陷, 使得高度为0
+* overflow清除浮动
+* 或者让父容器也同样浮动
+* 最好的方法：使用伪元素after
+```CSS
+.clearfic:after {
+    content: ".";
+    display: block; 让生成的元素以块级显示，占满剩余空间。
+    height: 0; 避免破坏原有高度。
+    clear: both; 清除浮动
+    visibility: hidden;
+}
+只有clear:both;是为了清除浮动的
+
+更优雅的写法：
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix: after {
+    clear: both;
+}
+
+这种写法可以防止空白崩溃。
+```
+* 触发BFC就可以清除浮动。
+
+### :active seletor
+The :active selector is used to select and style the active link.
+A link becomes active when you click on it.
+
+### :hover seletor
+The :hover selector is used to select elements when you mouse over them.
+
+### ::before & ::after
+The ::before selector inserts something before the content of each selected element(s).
+
+Use the content property to specify the content to insert.
+
+Use the ::after selector to insert something after the content.
+
+
+### display
+* inline-block: 在一行显示
+
+
+### box-sizing
+
+
+
+### text-overflow: ellipsis;
+
+### display: block;
+
+### font-style: normal;
+
+### cursor: not-allowed;
+
+### border-radius
+
+### device pixel ratio
+* 一般设备都为1
+* retina屏幕为2
