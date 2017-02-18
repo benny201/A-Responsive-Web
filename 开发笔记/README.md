@@ -127,6 +127,7 @@ user-scalable = no"/>
 * rem： 相对长度，但是只根据html节点的font-size，比em安全
 * font-size: 62.5% -> 1 rem = 10px
 * font-size: 100% -> 1rem = 16px
+* rem/em布局有利于用户调节字体大小
 
 ### ::selection
 * 设置选中文字后的各种属性，例如背景颜色
@@ -188,12 +189,49 @@ Use the ::after selector to insert something after the content.
 ### text-overflow: ellipsis;
 
 ### display: block;
+Displays an element as a block element (like `<p>`)
 
 ### font-style: normal;
 
 ### cursor: not-allowed;
 
 ### border-radius
+
+### child seletor
+```CSS
+header .top .tel,
+    header .top ul li:nth-child(3),
+    header .top ul li:nth-child(4) {
+        display: none;
+    }
+```
+
+### 普通selector
+* E
+* .class
+* #id
+* E F： 子元素
+* E > F：只能选直系子元素，不包括孙子元素
+* E + F: 相邻元素
+* E ~ F:
+
+### 属性选择器
+* E[attr]：所有拥有该attribute的元素
+* E[attr="value"]：对应值
+* E[attr^="value"]：以value开头的
+* E[attr$="value"]：以value结尾
+* E[attr*="value"]：只要包含value
+* E[attr~="value"]：以空格分开的词汇，有包含value的
+* E[attr|="value"]：以value 开头的，以及以value－开头的
+
+### 伪类和伪元素选择器
+* :link, ;visited, :active, :focus
+* :nth-child(可以用表达式：2n－> 2, 4, 6, etc...),nth-last-child()
+* first-child, last-child
+* nth-of-type(): 先找p类型，再往下数
+* :only-child
+* :only-of-type
+* :not()：可嵌套别的元素
 
 ### device pixel ratio
 * 一般设备都为1

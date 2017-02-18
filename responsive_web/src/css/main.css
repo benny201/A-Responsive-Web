@@ -149,16 +149,22 @@ header .top ul li a {
 	color: #fff;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 50em) {
+	header .top ul li a {
+		padding: 0 1.0rem;
+	}
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-
-}
-
-@media only screen and (max-width: 480px) {
-
+@media only screen and (max-width: 30em) {
+	header .top .tel,
+	header .top ul li:nth-child(3),
+	header .top ul li:nth-child(4) {
+		display: none;
+	}
 }
 
 
@@ -169,7 +175,7 @@ header .main {
 
 header .main .brand {
 	float: left;
-	padding: 1rem 1.5rem;
+	padding: 1rem 1.5rem 0 ;
 }
 
 header .main ul {
@@ -186,6 +192,32 @@ header .main ul li a {
 	padding: 0 3rem;
 	line-height: 5.5rem;
 	font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 50em) {
+	header .main .brand {
+		float: none;
+		display: block;
+		padding: 0;
+		margin: 1.5rem auto 0.5rem;
+		text-align: center;
+	}
+	header .main ul {
+		text-align: center;
+	}
+	header .main ul li {
+		border:none;
+	}
+	header.main ul li a {
+		padding: 0 1.3rem;
+	}
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+
+}
+
+@media only screen and (max-width: 30em) {
 }
 
 /*
@@ -354,7 +386,7 @@ header .main ul li a {
 
 .product h2 {
 	float: left;
-	/*width: 20%;*/
+	width: 20%;
 	margin: 3rem;
 	text-align: center;
 	font-size: 2.4rem;
@@ -374,7 +406,7 @@ header .main ul li a {
 
 .product .product-content {
 	float: right;
-	width: 79.5%;
+	width: 69.5%;
 	border-left: 1px solid #eee;
 	background-color: #fff;
 }
